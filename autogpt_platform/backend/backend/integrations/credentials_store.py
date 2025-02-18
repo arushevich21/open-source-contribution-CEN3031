@@ -21,6 +21,12 @@ from backend.data.model import (
 )
 from backend.util.settings import Settings
 
+from integrations.providers.heygen_provider import HeyGenProvider
+
+PROVIDERS = {
+    "heygen": HeyGenProvider,  # Register HeyGen API provider
+}
+
 settings = Settings()
 
 # This is an overrride since ollama doesn't actually require an API key, but the creddential system enforces one be attached
